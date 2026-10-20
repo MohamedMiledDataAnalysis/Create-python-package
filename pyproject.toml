@@ -1,0 +1,20 @@
+# Package description: the equivalent of DESCRIPTION in R.
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finbasic"
+version = "0.1.0"
+description = "Basic financial functions: loan payment and net present value."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Mohamed Miled" }]
+requires-python = ">=3.10"
+dependencies = []                 # like Imports: in DESCRIPTION; none needed here
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]             # like Suggests: testthat
+
+[tool.setuptools.packages.find]
+where = ["src"]
